@@ -8,8 +8,6 @@ eoLinker AMS Lite专为10人以内的小型团队设计，接近线上产品的�
 
 ![](http://data.eolinker.com/course/h4MXWsV99209a9cf4645c7d259d0562acba3c9f746a67b0)
 
-![](http://data.eolinker.com/course/XvkVdSWf53b2b7c37361531304ea5154e640ac40bd31ebb)
-
 ## 特性
 
 1. 免费且开源，eoLinker拥有强大的免费产品，在过去的一年里面eoLinker已迭代超过300个版本，优化近千功能点，同时秉承开源精神，提供国际化的开源产品（支持中文简体、繁体以及英语），为广大的开发、测试以及管理人员提供专业的产品。
@@ -33,14 +31,20 @@ eoLinker AMS Lite专为10人以内的小型团队设计，接近线上产品的�
 ## 部署要求
 
 * JDK 8+
-* mysql  5.5+
-* Tomcat 8+
+* MySQL 5.5+
+* Maven 3+
 
 ## 快速入门
 
-1. [安装指南](http://help.eolinker.com/?target=/md/%E5%BC%80%E6%BA%90%E7%89%88%E6%9C%AC/%E9%83%A8%E7%BD%B2%E6%8C%87%E5%8D%97)
+1. [安装指南]
+  -基于SpringBoot框架，需要在目标服务器提前准备JDK、MySQL、Maven环境
+  -直接在backend_source_code目录下面执行运行打包命令：mvn -U clean package -Dmaven.test.skip=true
+  -将target/eolinker_os-4.3.jar包copy到自定义目录，执行java -jar eolinker_os-4.3.jar启动服务
+  -访问http://IP:端口/eolinker_os/index.html
 
-2. [帮助中心](http://help.eolinker.com)
+2. [配置说明]
+  -此版本已经修复基础Bug，功能都可正常使用，不需要额外去修改代码
+  -可在打包前或安装完后，修改config/setting.properties配置文件，配置对应的数据库和端口信息（如已安装，需要重启服务）
 
 3. 官方交流Q群：
 官方已经闭源，只能下载到部署的war包。我这边早期Fork了他们的开源项目，已经修改了几个小问题，可以继续正常使用。
