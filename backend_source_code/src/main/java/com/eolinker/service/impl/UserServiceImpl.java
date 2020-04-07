@@ -98,6 +98,8 @@ public class UserServiceImpl implements UserService
 				session.setAttribute("userID", user.getUserID());
 				session.setAttribute("userName", user.getUserName());
 				session.setAttribute("userNickName", user.getUserNickName());
+				// 会话永不超时
+				session.setMaxInactiveInterval(-1);
 				result.put("userID", user.getUserID());
 				result.put("JSESSIONID", session.getId());
 			}
