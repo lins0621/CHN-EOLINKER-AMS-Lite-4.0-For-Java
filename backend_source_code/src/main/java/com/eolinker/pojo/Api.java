@@ -295,7 +295,7 @@ public class Api
 
 	public void setMockConfig(String mockConfig)
 	{
-		this.mockConfig = mockConfig;
+		this.mockConfig = "";
 	}
 
 	public String getApiSuccessStatusCode() {
