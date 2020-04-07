@@ -1078,7 +1078,7 @@ public class ApiServiceImpl implements ApiService
 				}
 				catch (ParseException e)
 				{
-					// TODO Auto-generated catch block
+					date = new Date();
 					e.printStackTrace();
 				}
 				Timestamp updateTime = new Timestamp(date.getTime());
