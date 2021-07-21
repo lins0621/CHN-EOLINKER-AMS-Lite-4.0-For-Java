@@ -46,6 +46,23 @@ eoLinker AMS Lite专为10人以内的小型团队设计，接近线上产品的�
   -此版本已经修复基础Bug，功能都可正常使用，不需要额外去修改代码
   -可在打包前或安装完后，修改config/setting.properties配置文件，配置对应的数据库和端口信息（如已安装，需要重启服务）
 
+## 二次开发说明
+1. [环境要求]
+  -Nodejs：7.9.0
+  
+2. [工程说明]
+![image](https://user-images.githubusercontent.com/10429611/126419088-3b25e8c8-bf53-4e32-bb0a-e1ee81d94030.png)
+  
+  -首先该项目是一个前后端分离的项目，后端是Springboot，前端是angular；
+  -后端代码backend_source_code是源码，直接导入到IDE即可，提前安装配置好数据库eolinker_os库（导入/database/eolinker_os.sql）；
+  -前端代码frontend_source_code是源码，需要先安装依赖：
+    --切换淘宝镜像：npm config set sass_binary_site=https://npm.taobao.org/mirrors/node-sass
+    --执行npm install安装前端依赖
+      ---如果提示：MSBUILD : error MSB3428: 未能加载 Visual C++ 组件“VCBuild.exe”。要解决此问题，1) 安装 .NET Framework 2.0 SDK；2) 安装 Microsoft Visual Stu 。。。
+      ---执行：npm install --global --production windows-build-tools
+      ---上面安装比较变态，需要卸载已经安装的python27版本（不然一直卡在安装python上），然后重新执行上面命令
+
+
 3. 官方交流Q群：
 官方已经闭源，只能下载到部署的war包。我这边早期Fork了他们的开源项目，已经修改了几个小问题，可以继续正常使用。
 
